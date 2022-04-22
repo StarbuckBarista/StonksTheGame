@@ -5,6 +5,7 @@
             Stonks: The Game
         </title>
         <link rel="stylesheet" href="style.css">
+        <script src="logic.js"></script>
     </head>
     <body>
         <table>
@@ -29,17 +30,17 @@
                 <td>
                     Apple
                 </td>
-                <td>
+                <td id="AAPL-value">
                     375
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('AAPL', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('AAPL', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="AAPL-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -49,17 +50,17 @@
                 <td>
                     Tesla
                 </td>
-                <td>
+                <td id="TSLA-value">
                     2325
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('TSLA', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('TSLA', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="TSLA-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -69,17 +70,17 @@
                 <td>
                     General Motors
                 </td>
-                <td>
+                <td id="GM-value">
                     100
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('GM', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('GM', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="GM-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -89,17 +90,17 @@
                 <td>
                     Honda
                 </td>
-                <td>
+                <td id="HMC-value">
                     50
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('HMC', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('HMC', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="HMC-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -109,17 +110,17 @@
                 <td>
                     Alibaba
                 </td>
-                <td>
+                <td id="BABA-value">
                     225
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('BABA', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('BABA', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="BABA-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -129,17 +130,17 @@
                 <td>
                     Disney
                 </td>
-                <td>
+                <td id="DIS-value">
                     300
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('DIS', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('DIS', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="DIS-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -149,17 +150,17 @@
                 <td>
                     Starbucks
                 </td>
-                <td>
+                <td id="SBUX-value">
                     175
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('SBUX', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('SBUX', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="SBUX-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -169,17 +170,17 @@
                 <td>
                     Coca-Cola
                 </td>
-                <td>
+                <td id="KO-value">
                     150
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('KO', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('KO', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="KO-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -189,17 +190,17 @@
                 <td>
                     Mc-Donalds
                 </td>
-                <td>
+                <td id="MCD-value">
                     575
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('MCD', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('MCD', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="MCD-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -209,17 +210,17 @@
                 <td>
                     Home Depot
                 </td>
-                <td>
+                <td id="HD-value">
                     700
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('HD', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('HD', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="HD-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -229,17 +230,17 @@
                 <td>
                     Microsoft
                 </td>
-                <td>
+                <td id="MSFT-value">
                     650
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('MSFT', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('MSFT', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="MSFT-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -249,17 +250,17 @@
                 <td>
                     Roku
                 </td>
-                <td>
+                <td id="ROKU-value">
                     250
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('ROKU', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('ROKU', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="ROKU-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -269,17 +270,17 @@
                 <td>
                     Amazon
                 </td>
-                <td>
+                <td id="AMZN-value">
                     7150
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('AMZN', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('AMZN', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="AMZN-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -289,17 +290,17 @@
                 <td>
                     Google
                 </td>
-                <td>
+                <td id="GOOGL-value">
                     5850
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('GOOGL', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('GOOGL', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="GOOGL-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -309,17 +310,17 @@
                 <td>
                     Snowflake
                 </td>
-                <td>
+                <td id="SNOW-value">
                     450
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('SNOW', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('SNOW', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="SNOW-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -329,17 +330,17 @@
                 <td>
                     MongoDB
                 </td>
-                <td>
+                <td id="MDB-value">
                     925
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('MDB', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('MDB', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="MDB-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -349,17 +350,17 @@
                 <td>
                     Walmart
                 </td>
-                <td>
+                <td id="WMT-value">
                     350
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('WMT', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('WMT', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="WMT-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -369,17 +370,17 @@
                 <td>
                     Netflix
                 </td>
-                <td>
+                <td id="NFLX-value">
                     775
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('NFLX', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('NFLX', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="NFLX-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -389,17 +390,17 @@
                 <td>
                     Toyota
                 </td>
-                <td>
+                <td id="TM-value">
                     375
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('TM', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('TM', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="TM-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -409,17 +410,17 @@
                 <td>
                     Oracle
                 </td>
-                <td>
+                <td id="ORCL-value">
                     175
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('ORCL', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('ORCL', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="ORCL-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -429,17 +430,17 @@
                 <td>
                     International Business Machines
                 </td>
-                <td>
+                <td id="IBM-value">
                     300
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('IBM', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('IBM', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="IBM-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -449,17 +450,17 @@
                 <td>
                     Costco
                 </td>
-                <td>
+                <td id="COST-value">
                     1325
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('COST', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('COST', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="COST-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -469,17 +470,17 @@
                 <td>
                     AMC Entertainment Holdings
                 </td>
-                <td>
+                <td id="AMC-value">
                     50
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('AMC', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('AMC', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="AMC-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -489,17 +490,17 @@
                 <td>
                     Gamestop
                 </td>
-                <td>
+                <td id="GME-value">
                     350
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('GME', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('GME', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="GME-quantity" type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -509,17 +510,17 @@
                 <td>
                     Litecoin
                 </td>
-                <td>
+                <td id="LIC-value">
                     250
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('LIC', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('LIC', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="LIC-quantity"type="number" class="number-input" value=0>
                 </td>
             </tr>
             <tr>
@@ -529,17 +530,17 @@
                 <td>
                     Ethereum
                 </td>
-                <td>
+                <td id="ETH-value">
                     7000
                 </td>
                 <td>
-                    <button>
+                    <button onclick="updateValue('ETH', this);">
                         Sell
                     </button>
-                    <button>
+                    <button onclick="updateValue('ETH', this);">
                         Buy
                     </button>
-                    <input type="number" class="number-input" value=0>
+                    <input id="ETH-quantity"type="number" class="number-input" value=0>
                 </td>
             </tr>
         </table>
