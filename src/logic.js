@@ -1,3 +1,32 @@
+const values = {
+    "AAPL": 375.0,
+    "TSLA": 2325.0,
+    "GM": 100.0,
+    "HMC": 50.0,
+    "BABA": 225.0,
+    "DIS": 300.0,
+    "SBUX": 175.0,
+    "KO": 150.0,
+    "MCD": 575.0,
+    "HD": 700.0,
+    "MSFT": 650.0,
+    "ROKU": 250.0,
+    "AMZN": 7150.0,
+    "GOOGL": 5850.0,
+    "SNOW": 450.0,
+    "MDB": 925.0,
+    "WMT": 350.0,
+    "NFLX": 775.0,
+    "TM": 375.0,
+    "ORCL": 175.0,
+    "IBM": 300.0,
+    "COST": 1325.0,
+    "AMC": 50.0,
+    "GME": 350.0,
+    "LIC": 250.0,
+    "ETH": 7000.0
+};
+
 const shares = {
     "AAPL": 17.5,
     "TSLA": 36.1,
@@ -198,7 +227,7 @@ function updateValue (stockSymbol, actionButton) {
     if (action.includes("Buy")) { updatedStockShares = stockShares + parseInt(stockQuantity.value); }
 
     const updatedStockValue = parseInt(stockValue.textContent) / stockShares * updatedStockShares;
-    stockValue.textContent = Math.round(updatedStockValue / 25) * 25;
+    values[stockSymbol] = updatedStockValue;
     stockQuantity.value = 0;
 }
 
@@ -213,9 +242,19 @@ function applyActionCard () {
 
         const stockValue = document.getElementById(actionCardStockSymbol + "-value");
         const updatedStockValue = parseInt(stockValue.textContent) * actionCardUpdate;
-
-        stockValue.textContent = Math.round(updatedStockValue / 25) * 25;
+        values[actionCardStockSymbol] = updatedStockValue;
     };
 
     actionCardID.value = "";
 }
+
+function updateValues () {
+
+    for (let stockSymbol in values) {
+
+        const stockValue = document.getElementById(stockSymbol + "-value");
+        stockValue.textContent = Math.round(values[stockSymbol] / 25) * 25;
+    };
+}
+
+window.setInterval(updateValues, 200);
