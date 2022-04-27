@@ -151,7 +151,7 @@ const actionCards = {
         "ETH": 0.5
     },
     "WS": {
-        "APPL": 0.93,
+        "AAPL": 0.93,
         "SBUX": 0.95,
         "MCD": 0.95,
         "HD": 1.03,
@@ -194,7 +194,7 @@ const actionCards = {
         "GME": 1.01
     },
     "CC": {
-        "APPL": 1.03,
+        "AAPL": 1.03,
         "DIS": 1.05,
         "HD": 1.075,
         "WMT": 1.05,
