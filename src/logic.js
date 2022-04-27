@@ -257,4 +257,19 @@ function updateValues () {
     };
 }
 
+function heartbeat () {
+
+    for (let stockSymbol in values) {
+
+        const stockValue = values[stockSymbol];
+        const variance = Math.random() * (1.0125 - 0.9875) + 0.9875;
+
+        if (Math.random() > 0.65) {
+
+            values[stockSymbol] = stockValue * variance;
+        }
+    };
+}
+
 window.setInterval(updateValues, 200);
+window.setInterval(heartbeat, 800);
