@@ -212,6 +212,83 @@ const actionCards = {
         'HMC': 1.05,
         'GM': 1.1
     },
+    'CAL-AAPL': {
+        'AAPL': 0.5
+    },
+    'CAL-TSLA': {
+        'TSLA': 0.5
+    },
+    'CAL-GM': {
+        'GM': 0.5
+    },
+    'CAL-HMC': {
+        'HMC': 0.5
+    },
+    'CAL-BABA': {
+        'BABA': 0.5
+    },
+    'CAL-DIS': {
+        'DIS': 0.5
+    },
+    'CAL-SBUX': {
+        'SBUX': 0.5
+    },
+    'CAL-KO': {
+        'KO': 0.5
+    },
+    'CAL-MCD': {
+        'MCD': 0.5
+    },
+    'CAL-HD': {
+        'HD': 0.5
+    },
+    'CAL-MSFT': {
+        'MSFT': 0.5
+    },
+    'CAL-ROKU': {
+        'ROKU': 0.5
+    },
+    'CAL-AMZN': {
+        'AMZN': 0.5
+    },
+    'CAL-GOOGL': {
+        'GOOGL': 0.5
+    },
+    'CAL-SNOW': {
+        'SNOW': 0.5
+    },
+    'CAL-MDB': {
+        'MDB': 0.5
+    },
+    'CAL-WMT': {
+        'WMT': 0.5
+    },
+    'CAL-NFLX': {
+        'NFLX': 0.5
+    },
+    'CAL-TM': {
+        'TM': 0.5
+    },
+    'CAL-ORCL': {
+        'ORCL': 0.5
+    },
+    'CAL-IBM': {
+        'IBM': 0.5
+    },
+    'CAL-COST': {
+        'COST': 0.5
+    },
+    'CAL-AMC': {
+        'AMC': 0.5
+    },
+    'CAL-GME': {
+        'GME': 0.5
+    },
+    'CAL-LIC': {
+        'LIC': 0.5
+    },
+    'CAL-ETH': {
+        'ETH': 0.5
     }
 };
 
