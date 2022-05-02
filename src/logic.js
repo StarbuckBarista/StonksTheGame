@@ -221,6 +221,9 @@ function updateValue (stockSymbol, actionButton) {
     const stockShares = shares[stockSymbol];
     const action = actionButton.textContent;
 
+    const stockCost = document.getElementById(stockSymbol + '-cost');
+    stockCost.textContent = Math.round(values[stockSymbol] * parseInt(stockQuantity.value) / 25) * 25;
+
     let updatedStockShares;
 
     if (action.includes("Sell")) { updatedStockShares = stockShares - parseInt(stockQuantity.value); }
