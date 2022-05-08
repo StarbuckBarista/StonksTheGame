@@ -304,8 +304,8 @@ function updateValue (stockSymbol, actionButton) {
 
     let updatedStockShares;
 
-    if (action.includes('Sell')) { updatedStockShares = stockShares - parseInt(stockQuantity.value); }
-    if (action.includes('Buy')) { updatedStockShares = stockShares + parseInt(stockQuantity.value); }
+    if (action.includes('Sell') || action.includes('Cover')) { updatedStockShares = stockShares - parseInt(stockQuantity.value); }
+    if (action.includes('Buy') || action.includes('Short')) { updatedStockShares = stockShares + parseInt(stockQuantity.value); }
 
     const updatedStockValue = parseInt(stockValue.textContent) / stockShares * updatedStockShares;
     values[stockSymbol] = updatedStockValue;
