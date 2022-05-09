@@ -335,6 +335,7 @@ function updateValue (stockSymbol, actionButton) {
 
     if (action.includes('Sell') || action.includes('Cover')) { updatedStockShares = stockShares - parseInt(stockQuantity.value); }
     if (action.includes('Buy') || action.includes('Short')) { updatedStockShares = stockShares + parseInt(stockQuantity.value); }
+    if (action.includes('Land')) { updatedStockShares = stockShares * (Math.random() * (1.375 - 0.625) + 0.625); }
 
     const updatedStockValue = parseInt(stockValue.textContent) / stockShares * updatedStockShares;
     values[stockSymbol] = updatedStockValue;
