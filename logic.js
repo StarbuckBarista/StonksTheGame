@@ -1,3 +1,32 @@
+const stocks = [
+    'AAPL', 
+    'AMC', 
+    'AMZN', 
+    'BABA', 
+    'COST', 
+    'DIS', 
+    'ETH', 
+    'GM', 
+    'GME', 
+    'GOOGL', 
+    'HD', 
+    'HMC', 
+    'IBM', 
+    'KO', 
+    'LIC', 
+    'MCD', 
+    'MDB', 
+    'MSFT', 
+    'NFLX', 
+    'ORCL', 
+    'ROKU', 
+    'SBUX', 
+    'SNOW', 
+    'TM', 
+    'TSLA', 
+    'WMT'
+];
+
 const values = {
     'AAPL': 375.0, 
     'AMC': 50.0, 
@@ -339,6 +368,15 @@ function updateValues () {
 }
 
 function heartbeat () {
+
+    for (let stock of stocks) {
+
+        const stockQuantity = document.getElementById(stock + '-quantity');
+        if (parseInt(stockQuantity.value) !== 0) { return; }
+    }
+
+    const actionCardID = document.getElementById('action-card-id');
+    if (actionCardID.value !== '') { return; }
 
     for (let stockSymbol in values) {
 
